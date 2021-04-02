@@ -21,7 +21,13 @@ class _ContadorState extends State<Contador> {
         title: Text('Meu Contador'),
       ),
       body: Container(
-        color: Colors.black,
+        color: Colors.white,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('Botao pressionado');
+        },
+        child: Icon(Icons.add),
       ),
     );
   }
