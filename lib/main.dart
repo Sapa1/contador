@@ -14,18 +14,36 @@ class Contador extends StatefulWidget {
 }
 
 class _ContadorState extends State<Contador> {
+  var resultado = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Meu Contador'),
       ),
-      body: Container(
-        color: Colors.white,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text(
+              'Você pressionou o botão:',
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
+          Center(
+            child: Text(
+              '$resultado',
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('Botao pressionado');
+          setState(() {
+            resultado += 1;
+          });
         },
         child: Icon(Icons.add),
       ),
