@@ -38,14 +38,28 @@ class _ContadorState extends State<Contador> {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print('Botao pressionado');
-          setState(() {
-            resultado += 1;
-          });
-        },
-        child: Icon(Icons.add),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: () {
+              print('Botao de soma pressionado');
+              setState(() {
+                resultado += 1;
+              });
+            },
+            child: Icon(Icons.add),
+          ),
+          FloatingActionButton(
+            onPressed: () {
+              print('Botao de subtração pressionado');
+              setState(() {
+                resultado -= 1;
+              });
+            },
+            child: Icon(Icons.remove),
+          ),
+        ],
       ),
     );
   }
