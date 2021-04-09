@@ -52,12 +52,23 @@ class _ContadorState extends State<Contador> {
           ),
           FloatingActionButton(
             onPressed: () {
-              print('Botao de subtração pressionado');
-              setState(() {
-                resultado -= 1;
-              });
-            },
-            child: Icon(Icons.remove),
+              print('Botao de sub pressionado');
+              setState(
+                () {
+                  resultado -= 1;
+                },
+              );
+            }, child: Icon(Icons.remove),
+          ),
+          FloatingActionButton(
+            onPressed: () {
+              print('Botao de sub pressionado');
+              setState(
+                () {
+                  resultado = 2*resultado;
+                },
+              );
+            }, child: Icon(Icons.multiple_stop),
           ),
         ],
       ),
