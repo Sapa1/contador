@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:contador/Exercicio2.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      home: Contador(),
+      home: Exercicio2(),
     ),
   );
 }
@@ -58,20 +59,12 @@ class _ContadorState extends State<Contador> {
                   resultado -= 1;
                 },
               );
-            }, child: Icon(Icons.remove),
-          ),
-          FloatingActionButton(
-            onPressed: () {
-              print('Botao de sub pressionado');
-              setState(
-                () {
-                  resultado = 2*resultado;
-                },
-              );
-            }, child: Icon(Icons.multiple_stop),
+            },
+            child: Icon(Icons.remove),
           ),
         ],
       ),
     );
   }
 }
+
